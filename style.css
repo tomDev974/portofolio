@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+#title {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+header ul li {
+    display: inline;
+    margin-left: 1rem;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header ul li a:hover {
+    text-decoration: underline;
+    color: #007BFF;
+}
+
+main {
+    padding: 5rem;
+}
+
+#acceuil {
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 13rem;
+}
+
+#acceuil h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#acceuil span {
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+#acceuil p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+#projets {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    gap: 2rem;
+}
+
+#projets h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+#projets p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+#projet-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#projet-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 300px;
+    padding: 1rem;
+    text-align: center;
+}
+
+#projet-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#projet-card p {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 10rem;
+    color: #666;
+}
+
+#projet-card a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+#projet-card a:hover {
+    background-color: #0056b3;
+    transform: scale(0.98);
+}
+
+#projet-card a:active {
+    transform: scale(0.95);
+}
+
+#propos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5rem;
+    margin-bottom: 13rem;
+}
+
+#propos h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#propos p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#propos-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+#propos-card {
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    height: 75px;
+    padding: 1rem;
+    text-align: center;
+}
+
+#propos-card h3 {
+    font-size: 1.5rem;
+    color: #fff;
+}
