@@ -17,6 +17,8 @@ header {
     padding: 1rem;
     background-color: #333;
     color: #fff;
+    position: sticky;
+    top: 0;
 }
 
 #title {
@@ -47,7 +49,9 @@ main {
 }
 
 #acceuil {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 5rem;
     margin-bottom: 13rem;
 }
@@ -67,7 +71,16 @@ main {
     color: #666;
 }
 
-#projets {
+#acceuil img {
+    margin-top: 5rem;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #007BFF;
+}
+
+#services {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,108 +88,70 @@ main {
     gap: 2rem;
 }
 
-#projets h2 {
+#services h2 {
     font-size: 2rem;
     color: #333;
 }
 
-#projets p {
+#services p {
     font-size: 1.1rem;
     color: #666;
     margin-bottom: 2rem;
 }
 
-#projet-list {
+#service-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
 }
 
-#projet-card {
-    background-color: #fff;
+#service-card {
+    background: linear-gradient(135deg, #7c7c7c3d 85%, #007BFF 15%);
     border-radius: 8px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.1);
     width: 300px;
     height: 300px;
     padding: 1rem;
     text-align: center;
-}
-
-#projet-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-#projet-card p {
-    text-align: center;
-    font-size: 1.1rem;
-    margin-bottom: 10rem;
-    color: #666;
-}
-
-#projet-card a {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #007BFF;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-#projet-card a:hover {
-    background-color: #0056b3;
-    transform: scale(0.98);
-}
-
-#projet-card a:active {
-    transform: scale(0.95);
-}
-
-#propos {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    flex-direction: column;
-    margin-top: 5rem;
-    margin-bottom: 13rem;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
 }
 
-#propos h2 {
-    font-size: 2rem;
-    color: #333;
+#service-card h3 {
+    display: flex;
+    min-height: 4rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
-#propos p {
+#service-card p {
+    text-align: center;
     font-size: 1.1rem;
+    margin-bottom: 1rem;
     color: #666;
-    max-width: 600px;
-    text-align: center;
-    margin-bottom: 3rem;
 }
 
-#propos-list {
+#service-card #others {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    justify-content: center;
+    margin-top: 0.5rem;
     width: 100%;
-    gap: 1rem;
-    margin-top: 2rem;
-    padding: 1rem;
+}   
+
+#service-card #others svg {
+    width: 65px;
+    height: 65px;
+    fill: #007BFF;
+    margin: 0 0.5rem;
+    transition: fill 0.3s;
 }
 
-#propos-card {
-    background-color: #333;
-    border-radius: 8px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    width: 450px;
-    height: 75px;
-    padding: 1rem;
-    text-align: center;
-}
-
-#propos-card h3 {
-    font-size: 1.5rem;
-    color: #fff;
+#service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.2);
 }
