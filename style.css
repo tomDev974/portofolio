@@ -19,6 +19,7 @@ header {
     color: #fff;
     position: sticky;
     top: 0;
+    z-index: 5;
 }
 
 #title {
@@ -50,15 +51,35 @@ main {
 
 #acceuil {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     margin-top: 5rem;
     margin-bottom: 13rem;
+    gap: 2rem;
 }
 
-#acceuil h1 {
+#acceuil-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 20rem;
+}
+
+#acceuil #salut {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+#acceuil #iam {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 0.5s;
 }
 
 #acceuil span {
@@ -68,16 +89,24 @@ main {
 
 #acceuil p {
     font-size: 1.2rem;
+    margin-top: 1rem;
     color: #666;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.5s;
 }
 
 #acceuil img {
-    margin-top: 5rem;
-    width: 200px;
-    height: 200px;
+    margin-left: auto;
+    margin-right: 15rem;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #007BFF;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 0.5s;
 }
 
 #services {
@@ -154,4 +183,48 @@ main {
 #service-card:hover {
     transform: translateY(-10px);
     box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
